@@ -2,17 +2,17 @@
 
 var wins = 0;
 var losses = 0;
-var numberofGuessLeft = 10;
+var numberofGuessLeft = 9;
 var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
  'l', 'm', 'n', 'o', 'p', 'q', 'r' , 's', 't', 'u', 'v', 'w', 'x', 'y' ,'z']
 var userGuesses = [];
 
-window.onload = function() {
-	alert("May the Force be with you!")
-}
+
+alert("May the Force be with you!")
+
 
 document.onkeyup = function(event) {
-	var userGuess = event.key.toLowerCase();
+	var userGuess = event.key//.toLowerCase();*Has to be only letters; No numbers allowed;
 	//var userGuess = //.toLowerCase//
 	var computerGuess = alphabet[Math.floor(Math.random()*alphabet.length)];
 	//console.log(computerGuess);
@@ -58,7 +58,7 @@ document.onkeyup = function(event) {
 	html = html + "<p>Letters You Guessed:" + guessString + "</p>";
 
 	
-	 document.querySelector("#game").innerHTML = html;
+	 document.querySelector(".play").innerHTML = html;
 
 	
 }
